@@ -6,7 +6,7 @@ class Component(car_model, ABC):
     
     def GetInfo(self, id1):
         # get info of component_id using id from database
-        pass
+        return True
 
     def AddNew(self, id1, **details):
         comp_id = id1
@@ -15,6 +15,7 @@ class Component(car_model, ABC):
             service_criteria = value
         
         # Add service_criteria and component in the database using id
+        return True
 
     def ChangeExisting(self, id1, **details):
         comp_id = id1
@@ -22,3 +23,4 @@ class Component(car_model, ABC):
             comp_name = key
             service_criteria = value
         # Change service criteria using id
+        return True

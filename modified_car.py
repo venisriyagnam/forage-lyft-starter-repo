@@ -6,7 +6,7 @@ class Car(car_model, ABC):
     
     def GetInfo(self, id1):
         # get info of car using id from database
-        pass
+        return True
 
     def AddNew(self, id1, **details):
         car_id = id1
@@ -15,7 +15,9 @@ class Car(car_model, ABC):
             parts[key] = value
         
         # Add parts dictionary in the database using id
+        return True
 
     def ChangeExisting(self, id1, **details):
         car_id = id1
         # Get the list of all parts using id and change according to the details dictionary
+        return True
